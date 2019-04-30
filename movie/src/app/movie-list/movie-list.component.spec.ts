@@ -23,8 +23,17 @@ describe('MovieListComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  xit('single movie should exist', ()=>{
-
+  it('single movie should exist', ()=>{
+    //setup
+    //exercise
+      //expect
+      let expected = 1; //1 or more
+      //actual
+      let actual = fixture.elementRef.nativeElement.querySelectorAll('.single-movie').length;
+    //assert
+    expect(actual).toBeGreaterThanOrEqual(expected);
+    expect(fixture.elementRef.nativeElement.querySelector('.single-movie')).toBeTruthy();
+    //teardown
   });
   
   xit('text input should exist and take input', ()=>{
