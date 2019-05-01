@@ -34,14 +34,14 @@ describe('MovieDetailComponent', () => {
     expect(e1.querySelector('div.title').innerText).toBeTruthy('Coco');
   });
 
-  xit('should have a movie-info', () => {
+  it('should have a movie-info', () => {
     const e1 = fixture.nativeElement;
-    expect(e1.querySelector('div.').innerText).toBeTruthy();
+    expect(e1.querySelector('div.movie-info').innerText).toBeTruthy('');
   });
 
-  xit('should have a plot', () => {
-    
-    expect(component).toBeTruthy();
+  it('should have a plot', () => {
+    const e1 = fixture.nativeElement;
+    expect(e1.querySelector('div.textarea').innerText).toBeTruthy('');
   });
 
 
