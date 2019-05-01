@@ -1,19 +1,24 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+
 import { AppComponent } from './app.component';
-import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MovieListComponent } from './movie-list/movie-list.component';
+import { SingleMovieComponent } from './single-movie/single-movie.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        ReactiveFormsModule
       ],
       declarations: [
         AppComponent,
         MovieListComponent,
-        MovieDetailComponent
+        MovieDetailComponent,
+        SingleMovieComponent
       ],
     }).compileComponents();
   }));

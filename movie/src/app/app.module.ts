@@ -7,18 +7,21 @@ import { AppComponent } from './app.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieService } from './movie.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SingleMovieComponent } from './single-movie/single-movie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieDetailComponent,
-    MovieListComponent
+    MovieListComponent,
+    SingleMovieComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
-    
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]

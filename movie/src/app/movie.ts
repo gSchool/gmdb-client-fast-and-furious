@@ -14,9 +14,9 @@ export class Movie {
     public Language:string;
     public Country:string;
     public Awards:string;
-    public  Poster:string;
-    public  Ratings:Rating[];
-    public  Metascore:string;
+    public Poster:string;
+    public Ratings:Rating[];
+    public Metascore:string;
     public imdbRating:string;
     public imdbVotes:string;
     public imdbID:string;
