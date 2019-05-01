@@ -4,11 +4,11 @@ import { Observable, of } from 'rxjs';
 import { Rating } from './rating';
 import { Search } from './cars.json';
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
+  movieData : Movie[];
   movieList: Movie [];
   constructor() { }
 
@@ -101,7 +101,10 @@ export class MovieService {
         "Website": "http://thor.marvel.com/",
         "Response": "True"
       }
-    ]
+      let movie = new Movie();
+      Object.keys(data).map( d => movie[d] = data[d]);
+      return of(movie);
+    
 
   }
 
