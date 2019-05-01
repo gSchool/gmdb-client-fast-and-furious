@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
+import { Movie } from './movie';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
+  movieData : Movie[];
 
   constructor() { }
 
-  movieDetail(){
-    return [
+  getMovie(): Observable<Movie>{
+     let data =
       {
         "Title": "Thor",
         "Year": "2011",
@@ -45,7 +48,10 @@ export class MovieService {
         "Website": "http://thor.marvel.com/",
         "Response": "True"
       }
-    ]
+      let movie = new Movie();
+      Object.keys(data).map( d => movie[d] = data[d]);
+      return of(movie);
+    
 
   }
 
