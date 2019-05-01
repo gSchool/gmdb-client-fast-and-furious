@@ -48,7 +48,7 @@ export class MovieService {
       "Response": "True"
     };
     let resultMovie: Movie = new Movie();
-    Object.keys(data).map( d => resultMovie[d] = data[d]);
+    Object.keys(data).map( horse => resultMovie[horse] = data[horse]);
     let result: Movie[] = [];
     result.push(resultMovie);
     return of(result);
