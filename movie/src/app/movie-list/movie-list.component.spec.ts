@@ -189,15 +189,21 @@ describe('MovieListComponent', () => {
       expect(fixture.elementRef.nativeElement.querySelector('.no-results')).toBeTruthy();
       //teardown
     });
-    xit('should show 1 result if api response has 1 result', ()=>{
+    it('should show 1 result if api response has 1 result', ()=>{
       //setup
-      // set the value as "asdf"
+      // set the value as "titanic"
+      fixture.componentRef.instance.searchForm.setValue({ q: "titanic" });
       // set form as dirty
+      fixture.componentRef.instance.searchForm.markAsDirty();
+      //submit form
+      fixture.componentRef.instance.findMovie(fixture.componentRef.instance.searchForm);
+      fixture.detectChanges();
       //exercise
         //expect
+        let expected = 1; 
         // [{ ... movie data ... }]
-        let expected = 1; //1 result
         //actual
+        
         // submit the form and should get no data from service (findMovie) // will need a mock service
         let actual = fixture.elementRef.nativeElement.querySelectorAll('.single-movie').length;
         
@@ -208,10 +214,15 @@ describe('MovieListComponent', () => {
       expect(fixture.elementRef.nativeElement.querySelector('.single-movie')).toBeTruthy();
       //teardown
     });
-    xit('if response from api has more than 10 results should show 10 results and show more button', ()=>{
+    it('if response from api has more than 10 results should show 10 results and show more button', ()=>{
       //setup
-      // set the value as "asdf"
+      // set the value as "titanic"
+      fixture.componentRef.instance.searchForm.setValue({ q: "A" });
       // set form as dirty
+      fixture.componentRef.instance.searchForm.markAsDirty();
+      //submit form
+      fixture.componentRef.instance.findMovie(fixture.componentRef.instance.searchForm);
+      fixture.detectChanges();
       //exercise
         //expect
         // [{ ... movie data ... }]
@@ -223,7 +234,7 @@ describe('MovieListComponent', () => {
       //actual
       //assert  
       // expect movie data from service to equal []
-      expect(actual).toBeGreaterThan(expected);
+      expect(actual).toBeGreaterThanOrEqual(expected);
       expect(fixture.elementRef.nativeElement.querySelector('.single-movie')).toBeTruthy();
       //teardown
     });

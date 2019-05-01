@@ -71,6 +71,11 @@ export class MovieService {
       return of(result);
     }
 
+    if(keyword === 'A'){
+      result.length = 10;
+      return of(result);
+    }
+
     result.push(resultMovie);
     return of(result);
   }
