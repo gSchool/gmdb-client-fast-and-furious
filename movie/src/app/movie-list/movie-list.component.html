@@ -11,8 +11,15 @@
     </div>
   </form>
 </div>
-<div class="results" *ngIf="movieResults && movieResults.length > 0">
+<div class="results" *ngIf="movieResults && movieResults.length > 0 && showAll">
   <app-single-movie *ngFor="let movie of movieResults" [movie]="movie"></app-single-movie>
+</div>
+<div class="results" *ngIf="movieResults && movieResults.length > 0 && !showAll">
+  <app-single-movie *ngFor="let movie of firstTenResults" [movie]="movie"></app-single-movie>
+</div>
+
+<div *ngIf="movieResults && movieResults.length > 10">
+  <button (click) = "showMore()">Show more....</button>
 </div>
 <div class="no-results" *ngIf="movieResults && movieResults.length === 0">
   No Results... Sorry, Buddy!!!

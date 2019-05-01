@@ -217,7 +217,7 @@ describe('MovieListComponent', () => {
     it('if response from api has more than 10 results should show 10 results and show more button', ()=>{
       //setup
       // set the value as "titanic"
-      fixture.componentRef.instance.searchForm.setValue({ q: "A" });
+      fixture.componentRef.instance.searchForm.setValue({ q: "car" });
       // set form as dirty
       fixture.componentRef.instance.searchForm.markAsDirty();
       //submit form
@@ -238,14 +238,22 @@ describe('MovieListComponent', () => {
       expect(fixture.elementRef.nativeElement.querySelector('.single-movie')).toBeTruthy();
       //teardown
     });
-    xit('if show more is clicked then we show all of the results', ()=>{
+    it('if show more is clicked then we show all of the results', ()=>{
       //setup
-      // set the value as "Tom Cruise"
+      // set the value as "car"
+      fixture.componentRef.instance.searchForm.setValue({ q: "car" });
       // set form as dirty
+      fixture.componentRef.instance.searchForm.markAsDirty();
+      //submit form
+      fixture.componentRef.instance.findMovie(fixture.componentRef.instance.searchForm);
+      //hit show all
+      fixture.componentInstance.showAll = true;
+      fixture.detectChanges();
+
       //exercise
         //expect
         // [{ ... movie data ... }]
-        let expected = 15; //15 results
+        let expected = 101; //15 results
         //actual
         // submit the form and should get no data from service (findMovie) // will need a mock service
         let actual = fixture.elementRef.nativeElement.querySelectorAll('.single-movie').length;

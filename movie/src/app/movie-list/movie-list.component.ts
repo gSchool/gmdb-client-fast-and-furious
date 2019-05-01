@@ -11,7 +11,9 @@ import { Movie } from '../movie';
 })
 export class MovieListComponent implements OnInit {
   movieResults: Movie[];
+  firstTenResults: Movie[];
   searchForm: FormGroup;
+  showAll : boolean = false;
   constructor(private fb: FormBuilder,private movieService : MovieService) { }
 
   ngOnInit() {
@@ -30,10 +32,16 @@ export class MovieListComponent implements OnInit {
       this.movieService.findMovie(keyword).subscribe(data => {
         console.log(data);
         this.movieResults = data;
+        this.firstTenResults = data.slice(0, 10);
+        this.showAll = false;
       });
       console.log(keyword);
     }
     
+  }
+
+  showMore(){
+    this.showAll = !this.showAll;
   }
 
 }
