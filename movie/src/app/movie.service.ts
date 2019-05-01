@@ -48,6 +48,7 @@ export class MovieService {
       "Website": "http://thor.marvel.com/",
       "Response": "True"
     };
+
     let resultMovie: Movie = new Movie();
     Object.keys(data).map( key => {
       if(key === "Ratings"){
@@ -65,6 +66,11 @@ export class MovieService {
       return key;
     });
     let result: Movie[] = [];
+
+    if(keyword === 'asdf'){
+      return of(result);
+    }
+
     result.push(resultMovie);
     return of(result);
   }

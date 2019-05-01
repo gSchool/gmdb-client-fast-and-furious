@@ -31,6 +31,54 @@ describe('MovieListComponent', () => {
     expect(component).toBeTruthy();
   });
 
+ 
+  
+  it('text input should exist', ()=>{
+    //setup
+    //exercise
+      //expect
+      let expected = 1; //1 or more
+      //actual
+      let actual = fixture.elementRef.nativeElement.querySelectorAll('input[name=q]').length;
+    //assert
+    expect(actual).toBeGreaterThanOrEqual(expected);
+    expect(fixture.elementRef.nativeElement.querySelector('input[name=q]')).toBeTruthy();
+    //teardown
+  });
+
+  it('text input should take input', ()=>{
+    //setup
+    // set the value as "Fast and Furious"
+    fixture.componentRef.instance.searchForm.setValue({ q: "Fast and Furious" });
+    // set form as dirty
+    fixture.componentRef.instance.searchForm.markAsDirty();
+    //exercise
+      //expect
+      let expected = 'Fast and Furious';
+      // "Fast and Furious"
+      //actual
+      let actual = fixture.componentInstance.searchForm.get('q').value;
+
+      // get component keyword value (q)
+    //assert
+    expect(actual).toEqual(expected);
+    // expect component keyword to be equal to "Fast and Furious"
+    //teardown
+  });
+
+  it('search button should exist', ()=>{
+    //setup
+    //exercise
+      //expect
+      let expected = 1; //1 or more
+      //actual
+      let actual = fixture.elementRef.nativeElement.querySelectorAll('input[type=submit]').length;
+    //assert
+    expect(actual).toBeGreaterThanOrEqual(expected);
+    expect(fixture.elementRef.nativeElement.querySelector('input[type=submit]')).toBeTruthy();
+    //teardown
+  });
+
   it('single movie should exist', ()=>{
     //setup
       // set the value as "Thor"
@@ -50,90 +98,81 @@ describe('MovieListComponent', () => {
     expect(fixture.elementRef.nativeElement.querySelector('.single-movie')).toBeTruthy();
     //teardown
   });
-  
-  it('text input should exist', ()=>{
-    //setup
-    //exercise
-      //expect
-      let expected = 1; //1 or more
-      //actual
-      let actual = fixture.elementRef.nativeElement.querySelectorAll('input[name=q]').length;
-    //assert
-    expect(actual).toBeGreaterThanOrEqual(expected);
-    expect(fixture.elementRef.nativeElement.querySelector('input[name=q]')).toBeTruthy();
-    //teardown
-  });
 
-  xit('text input should take input', ()=>{
-    //setup
-    // set the value as "Fast and Furious"
-    // set form as dirty
-    //exercise
-      //expect
-      // "Fast and Furious"
-      //actual
-      // get component keyword value (q)
-    //assert
-    // expect component keyword to be equal to "Fast and Furious"
-    //teardown
-  });
-
-  it('search button should exist', ()=>{
-    //setup
-    //exercise
-      //expect
-      let expected = 1; //1 or more
-      //actual
-      let actual = fixture.elementRef.nativeElement.querySelectorAll('input[type=submit]').length;
-    //assert
-    expect(actual).toBeGreaterThanOrEqual(expected);
-    expect(fixture.elementRef.nativeElement.querySelector('input[type=submit]')).toBeTruthy();
-    //teardown
-  });
-  xdescribe('search button should get valid api data', ()=>{
-    xit('search title should return movie(s)', ()=>{
+  describe('search button should get valid api data', ()=>{
+    it('search title should return movie(s)', ()=>{
       //setup
       // set the value as "Fast and Furious"
+      fixture.componentRef.instance.searchForm.setValue({ q: "Fast and Furious" });
       // set form as dirty
+      fixture.componentRef.instance.searchForm.markAsDirty();
+      //submit form
+      fixture.componentRef.instance.findMovie(fixture.componentRef.instance.searchForm);
+      fixture.detectChanges(); 
       //exercise
         //expect
+        let expected = 1; 
         // { ... movie data ... }
         //actual
+        let actual = fixture.componentInstance.movieResults.length;
         // submit the form and should get movie data from service (findMovie) // will need a mock service
       //assert
       // expect movie data from service to equal { ... movie data ... }
+      expect(actual).toBeGreaterThanOrEqual(expected);
       //teardown
     });
-    xit('search actor should return movie(s)', ()=>{
+    it('search actor should return movie(s)', ()=>{
       //setup
       // set the value as "Tom Cruise"
+      fixture.componentRef.instance.searchForm.setValue({ q: "Tom Cruise" });
       // set form as dirty
+      fixture.componentRef.instance.searchForm.markAsDirty();
+      //submit form
+      fixture.componentRef.instance.findMovie(fixture.componentRef.instance.searchForm);
+      fixture.detectChanges(); 
       //exercise
         //expect
+        let expected = 1; 
         // { ... movie data ... }
         //actual
+        let actual = fixture.componentInstance.movieResults.length;
         // submit the form and should get movie data from service (findMovie) // will need a mock service
       //assert
       // expect movie data from service to equal { ... movie data ... }
+      expect(actual).toBeGreaterThanOrEqual(expected);
       //teardown
     });
-    xit('search keyword should return movie(s)', ()=>{
+    it('search keyword should return movie(s)', ()=>{
       //setup
+      fixture.componentRef.instance.searchForm.setValue({ q: "car" });
       // set the value as "car"
       // set form as dirty
-      //exercise
+      fixture.componentRef.instance.searchForm.markAsDirty();
+     
+      //submit form
+      fixture.componentRef.instance.findMovie(fixture.componentRef.instance.searchForm);
+      fixture.detectChanges(); 
+       //exercise
         //expect
+        let expected = 1;
         // { ... movie data ... }
         //actual
+        let actual = fixture.componentInstance.movieResults.length;
         // submit the form and should get movie data from service (findMovie) // will need a mock service
       //assert  
+      expect(actual).toBeGreaterThanOrEqual(expected);
       // expect movie data from service to equal { ... movie data ... }
       //teardown
     });
-    xit('should show 0 results if api response has 0 results', ()=>{
+    it('should show 0 results if api response has 0 results', ()=>{
       //setup
       // set the value as "asdf"
+      fixture.componentRef.instance.searchForm.setValue({ q: "asdf" });
       // set form as dirty
+      fixture.componentRef.instance.searchForm.markAsDirty();
+      //submit form
+      fixture.componentRef.instance.findMovie(fixture.componentRef.instance.searchForm);
+      fixture.detectChanges(); 
       //exercise
         //expect
         // [ ]
@@ -146,7 +185,8 @@ describe('MovieListComponent', () => {
       //assert  
       // expect movie data from service to equal []d\
       expect(actual).toEqual(expected);
-      expect(fixture.elementRef.nativeElement.querySelector('.single-movie')).toBeTruthy();
+      expect(fixture.elementRef.nativeElement.querySelector('.single-movie')).toBeFalsy();
+      expect(fixture.elementRef.nativeElement.querySelector('.no-results')).toBeTruthy();
       //teardown
     });
     xit('should show 1 result if api response has 1 result', ()=>{

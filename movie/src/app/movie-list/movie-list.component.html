@@ -11,6 +11,9 @@
     </div>
   </form>
 </div>
-<div class="results">
+<div class="results" *ngIf="movieResults && movieResults.length > 0">
   <app-single-movie *ngFor="let movie of movieResults" [movie]="movie"></app-single-movie>
+</div>
+<div class="no-results" *ngIf="movieResults && movieResults.length === 0">
+  No Results... Sorry, Buddy!!!
 </div>
