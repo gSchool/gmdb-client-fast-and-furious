@@ -11,3 +11,6 @@
     </div>
   </form>
 </div>
+<div class="results">
+  <app-single-movie *ngFor="let movie of movieResults" [movie]="movie"></app-single-movie>
+</div>

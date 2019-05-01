@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MovieListComponent } from './movie-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SingleMovieComponent } from '../single-movie/single-movie.component';
 
 describe('MovieListComponent', () => {
   let component: MovieListComponent;
@@ -12,7 +13,10 @@ describe('MovieListComponent', () => {
       imports: [
         ReactiveFormsModule
       ],
-      declarations: [ MovieListComponent ]
+      declarations: [ 
+        MovieListComponent,
+        SingleMovieComponent
+      ]
     })
     .compileComponents();
   }));
@@ -29,8 +33,13 @@ describe('MovieListComponent', () => {
 
   it('single movie should exist', ()=>{
     //setup
-      // set the value as "asdf"
+      // set the value as "Thor"
+      fixture.componentRef.instance.searchForm.setValue({ q: "Thor" });
       // set form as dirty
+      fixture.componentRef.instance.searchForm.markAsDirty();
+
+      fixture.componentRef.instance.findMovie(fixture.componentRef.instance.searchForm);
+      fixture.detectChanges();
     //exercise
       //expect
       let expected = 1; //1 or more
