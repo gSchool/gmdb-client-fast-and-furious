@@ -1,3 +1,26 @@
-<p>
-  movie-list works!
-</p>
+<div>
+  <form [ngClass]="'col s12'" [formGroup]="searchForm" (ngSubmit)="findMovie(searchForm)">
+    <div class="row">
+      <div class="input-field col s9">
+        <input placeholder="Search" id="q" formControlName="q" name="q" type="text" class="validate">
+        <label for="q">Search</label>
+      </div>
+      <div class="input-field col s3">
+        <input type="submit" value="Search" [ngClass]="'waves-effect waves-light btn'">
+      </div>
+    </div>
+  </form>
+</div>
+<div class="results" *ngIf="movieResults && movieResults.length > 0 && showAll">
+  <app-single-movie *ngFor="let movie of movieResults" [movie]="movie"></app-single-movie>
+</div>
+<div class="results" *ngIf="movieResults && movieResults.length > 0 && !showAll">
+  <app-single-movie *ngFor="let movie of firstTenResults" [movie]="movie"></app-single-movie>
+</div>
+
+<div *ngIf="movieResults && movieResults.length > 10">
+  <button (click) = "showMore()">Show more....</button>
+</div>
+<div class="no-results" *ngIf="movieResults && movieResults.length === 0">
+  No Results... Sorry, Buddy!!!
+</div>

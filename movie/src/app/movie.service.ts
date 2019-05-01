@@ -1,12 +1,68 @@
 import { Injectable } from '@angular/core';
+import { Movie } from './movie';
+import { Observable, of } from 'rxjs';
+import { Rating } from './rating';
+import { Search } from './cars.json';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
-
+  movieList: Movie [];
   constructor() { }
 
+  findMovie(keyword:string): Observable<Movie[]>{
+    
+    let data = Search[0];
+    let resultMovie: Movie = new Movie();
+    Object.keys(data).map( key => {
+      if(key === "Ratings"){
+        let ratings = data[key].map(obj => {
+          let rating = new Rating();
+          rating.Source = obj.Source;
+          rating.Value = obj.Value;
+          return rating;
+        });
+        resultMovie[key] = ratings;
+      }
+      else{
+        resultMovie[key] = data[key];
+      }
+      return key;
+    });
+    let result: Movie[] = [];
+
+    if(keyword === 'car'){
+      Search.forEach(data => {
+        let movie: Movie = new Movie();
+        Object.keys(data).map( key => {
+          if(key === "Ratings"){
+            let ratings = data[key].map(obj => {
+              let rating = new Rating();
+              rating.Source = obj.Source;
+              rating.Value = obj.Value;
+              return rating;
+            });
+            movie[key] = ratings;
+          }
+          else{
+            movie[key] = data[key];
+          }
+          return key;
+        });
+        result.push(movie)
+      });
+    }
+    if(keyword === 'asdf'){
+      return of(result);
+    }
+
+    
+
+    result.push(resultMovie);
+    return of(result);
+  }
   movieDetail(){
     return [
       {
