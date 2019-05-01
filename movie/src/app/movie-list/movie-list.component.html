@@ -2,7 +2,7 @@
   <form [ngClass]="'col s12'" [formGroup]="searchForm" (ngSubmit)="findMovie(searchForm)">
     <div class="row">
       <div class="input-field col s9">
-        <input placeholder="Search" id="q" formControlName="q" type="text" class="validate">
+        <input placeholder="Search" id="q" formControlName="q" name="q" type="text" class="validate">
         <label for="q">Search</label>
       </div>
       <div class="input-field col s3">

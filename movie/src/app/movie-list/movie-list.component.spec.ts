@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MovieListComponent } from './movie-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('MovieListComponent', () => {
   let component: MovieListComponent;
@@ -8,6 +9,9 @@ describe('MovieListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        ReactiveFormsModule
+      ],
       declarations: [ MovieListComponent ]
     })
     .compileComponents();
@@ -38,7 +42,7 @@ describe('MovieListComponent', () => {
     //teardown
   });
   
-  xit('text input should exist', ()=>{
+  it('text input should exist', ()=>{
     //setup
     //exercise
       //expect
@@ -65,7 +69,7 @@ describe('MovieListComponent', () => {
     //teardown
   });
 
-  xit('search button should exist', ()=>{
+  it('search button should exist', ()=>{
     //setup
     //exercise
       //expect
