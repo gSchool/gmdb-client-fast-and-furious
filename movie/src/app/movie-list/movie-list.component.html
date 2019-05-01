@@ -1,3 +1,13 @@
-<p>
-  movie-list works!
-</p>
+<div>
+  <form [ngClass]="'col s12'" [formGroup]="searchForm" (ngSubmit)="findMovie(searchForm)">
+    <div class="row">
+      <div class="input-field col s9">
+        <input placeholder="Search" id="q" formControlName="q" type="text" class="validate">
+        <label for="q">Search</label>
+      </div>
+      <div class="input-field col s3">
+        <input type="submit" value="Search" [ngClass]="'waves-effect waves-light btn'">
+      </div>
+    </div>
+  </form>
+</div>
