@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Movie } from './movie';
 import { Observable, of } from 'rxjs';
+import { Rating } from './rating';
 
 
 @Injectable({
@@ -48,7 +49,21 @@ export class MovieService {
       "Response": "True"
     };
     let resultMovie: Movie = new Movie();
-    Object.keys(data).map( horse => resultMovie[horse] = data[horse]);
+    Object.keys(data).map( key => {
+      if(key === "Ratings"){
+        let ratings = data[key].map(obj => {
+          let rating = new Rating();
+          rating.Source = obj.Source;
+          rating.Value = obj.Value;
+          return rating;
+        });
+        resultMovie[key] = ratings;
+      }
+      else{
+        resultMovie[key] = data[key];
+      }
+      return key;
+    });
     let result: Movie[] = [];
     result.push(resultMovie);
     return of(result);
