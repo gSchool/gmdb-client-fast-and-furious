@@ -4,6 +4,7 @@ import { MovieListComponent } from './movie-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SingleMovieComponent } from '../single-movie/single-movie.component';
 import { RouterTestingModule } from '@angular/router/testing';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 describe('MovieListComponent', () => {
   let component: MovieListComponent;
@@ -17,7 +18,8 @@ describe('MovieListComponent', () => {
       ],
       declarations: [ 
         MovieListComponent,
-        SingleMovieComponent
+        SingleMovieComponent,
+        NavbarComponent
       ]
     })
     .compileComponents();

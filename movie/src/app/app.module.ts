@@ -10,6 +10,12 @@ import { MovieService } from './movie.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SingleMovieComponent } from './single-movie/single-movie.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { ReviewCreateComponent } from './review-create/review-create.component';
+import { PasswordResetComponent } from './password-reset/password-reset.component';
+import { WatchlistListComponent } from './watchlist-list/watchlist-list.component';
+import { WatchlistDetailComponent } from './watchlist-detail/watchlist-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +23,13 @@ import { NavbarComponent } from './navbar/navbar.component';
     MovieDetailComponent,
     MovieListComponent,
     SingleMovieComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent,
+    SignUpComponent,
+    ReviewCreateComponent,
+    PasswordResetComponent,
+    WatchlistListComponent,
+    WatchlistDetailComponent
   ],
   imports: [
     BrowserModule,

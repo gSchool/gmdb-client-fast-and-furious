@@ -1,5 +1,7 @@
 import { Rating } from './rating';
-
+let displayHash = {
+    imdbRating: "Imdb Rating"
+};
 export class Movie {
     public Title:string;
     public Year:string;
@@ -27,6 +29,12 @@ export class Movie {
     public Website ?:string;
     public Response:string;
 
+    convertToDisplay(property: string): string{
+        if(displayHash[property]){
+            return displayHash[property];
+        }
+        return property;
+    }
 }
 
 
