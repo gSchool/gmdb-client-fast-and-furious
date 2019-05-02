@@ -17,10 +17,8 @@ export class MovieDetailComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.route.queryParamMap.subscribe(param => {
-    //  this.movieTitle= param.get('title');
+    
     this.route.paramMap.subscribe(map => {
-      // console.log(map);
       let movieTitle: string = map['params'].name;
       if(movieTitle){
         this.movieService.getMovie(movieTitle).subscribe(
@@ -30,8 +28,6 @@ export class MovieDetailComponent implements OnInit {
         );
        }
     });
-     
-    // });
 
      
   }
