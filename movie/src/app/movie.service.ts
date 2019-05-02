@@ -63,8 +63,8 @@ export class MovieService {
     result.push(resultMovie);
     return of(result);
   }
-  movieDetail(){
-    return [
+  getMovie(): Observable<Movie>{
+    let data = 
       {
         "Title": "Thor",
         "Year": "2011",
@@ -100,7 +100,7 @@ export class MovieService {
         "Production": "Paramount Pictures",
         "Website": "http://thor.marvel.com/",
         "Response": "True"
-      }
+      };
       let movie = new Movie();
       Object.keys(data).map( d => movie[d] = data[d]);
       return of(movie);
