@@ -9,6 +9,7 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieService } from './movie.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SingleMovieComponent } from './single-movie/single-movie.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ReviewCreateComponent } from './review-create/review-create.component';
@@ -22,6 +23,7 @@ import { WatchlistDetailComponent } from './watchlist-detail/watchlist-detail.co
     MovieDetailComponent,
     MovieListComponent,
     SingleMovieComponent,
+    NavbarComponent,
     LoginComponent,
     SignUpComponent,
     ReviewCreateComponent,

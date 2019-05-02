@@ -6,6 +6,7 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { SingleMovieComponent } from './single-movie/single-movie.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -18,7 +19,8 @@ describe('AppComponent', () => {
         AppComponent,
         MovieListComponent,
         MovieDetailComponent,
-        SingleMovieComponent
+        SingleMovieComponent,
+        NavbarComponent
       ],
     }).compileComponents();
   }));

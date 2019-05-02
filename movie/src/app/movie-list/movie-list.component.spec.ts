@@ -3,6 +3,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MovieListComponent } from './movie-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SingleMovieComponent } from '../single-movie/single-movie.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NavbarComponent } from '../navbar/navbar.component';
+import { ActivatedRoute } from '@angular/router';
 
 describe('MovieListComponent', () => {
   let component: MovieListComponent;
@@ -11,11 +14,13 @@ describe('MovieListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
+        RouterTestingModule,
         ReactiveFormsModule
       ],
       declarations: [ 
         MovieListComponent,
-        SingleMovieComponent
+        SingleMovieComponent,
+        NavbarComponent
       ]
     })
     .compileComponents();
