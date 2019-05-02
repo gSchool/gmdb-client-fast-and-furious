@@ -1,36 +1,103 @@
+<div class="container signup-container">
+    <form  id="signup" [formGroup]="formSignup" (ngSubmit)="signup()">
+  <div class="row">
+      <h3>SignUp</h3> 
+  </div>
+  
+  <div class="row field-wrapper">
+    <div class="col-lg-3 label-wrapper"><label>Name</label></div>
+    <div class="col-lg-9"> <input class='name' type="text" formControlName="name" name="name" required /></div>
+    <div class="col-lg-12"><label *ngIf="formSignup.controls.name.invalid && formSignup.controls.name.dirty"
+        class="alert alert-danger">
+        Name is required
+      </label></div>
+  </div>
 
- <h3>SignUp</h3> <br><br>    
-<form  id="signup" [formGroup]="formSignup" (ngSubmit)="signup()">
-  <title>Enter your information to SignUp or press login </title>
+  <div class="row">
+    <div class="col-lg-3 label-wrapper"> <label>Phone Number</label></div>
+    <div class="col-lg-9"><input class='phoneNumber' type="phone" formControlName="phoneNumber" name="phoneNumber" />
+    </div>
+    <div class="col-lg-12"></div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3 label-wrapper"> <label>Email</label></div>
+    <div class="col-lg-9"> <input class='email' type="email" formControlName="email" required /></div>
+    <div class="col-lg-12"><label *ngIf="formSignup.controls.email.invalid && formSignup.controls.email.dirty"
+        class="alert alert-danger">
+        email is invalid
+      </label></div>
+  </div>
 
-  <label>Name       :</label>
+      <div class="row">
+        <div class="col-lg-3 label-wrapper"><label>Password</label></div>
+        <div class="col-lg-9"><input class='password' type="password" formControlName="password" required /></div>
+        <div class="col-lg-12"><label *ngIf="formSignup.controls.password.invalid && formSignup.controls.password.dirty"
+            class="alert alert-danger">
+            password must have aleast six charaters
+          </label></div>
+      </div>
+
+  
+  <div class="row"> 
+    <div class="col-lg-3"></div>
+    <div class="col-lg-9"><input class="btn btn-primary " type="submit" value="signup"></div>
+    <div class="col-lg-12"></div>
+    
+  </div>
+    </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<!-- <form  id="signup" [formGroup]="formSignup" (ngSubmit)="signup()"> -->
+  <!-- <title>Enter your information to SignUp or press login </title> -->
+
+  <!-- <label>Name       :</label>
   <input class='name' type="text" formControlName="name" name="name" required />
   <label *ngIf="formSignup.controls.name.invalid && formSignup.controls.name.dirty" class="alert alert-danger">
     Name is required
   </label>
-  <br />
+  <br /> -->
 
-  <label>Phone Number:</label>
-  <input class='phoneNumber' type="phone" formControlName="phoneNumber" name="phoneNumber" />
+  <!-- <label>Phone Number:</label>
+  <input class='phoneNumber' type="phone" formControlName="phoneNumber" name="phoneNumber" /> -->
   <!-- <label>(optional)</label> -->
-  <br />
+  <!-- <br /> -->
 
-  <label>Email    :</label>
+  <!-- <label>Email    :</label>
   <input class='email' type="email" formControlName="email" required />
   <label *ngIf="formSignup.controls.email.invalid && formSignup.controls.email.dirty" class="alert alert-danger">
     email is invalid
   </label>
 
-  <br />
-  <label>Password:</label>
+  <br /> -->
+  <!-- <label>Password:</label>
   <input class='password' type="password" formControlName="password" required />
   <label *ngIf="formSignup.controls.password.invalid && formSignup.controls.password.dirty" class="alert alert-danger">
     password must have aleast six charaters
   </label>
   <br />
-  <br />
-  <input class="btn btn-primary" type="submit" value="signup">
+  <br /> -->
+  <!-- <input class="btn btn-primary" type="submit" value="signup"> -->
 
-</form>
+<!-- </form> -->
 
 
