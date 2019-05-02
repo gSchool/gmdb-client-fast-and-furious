@@ -16,7 +16,8 @@ export class SingleMovieComponent implements OnInit {
   ngOnInit() {
 
   }
- getMovieDetails(title:string){
-this.router.navigate(['movies/detail'], {queryParams:{"title":title}} );
- }
+  
+//  getMovieDetails(title:string){
+// // this.router.navigate(['movies/detail'], {queryParams:{"title":title}} );
+//  }
 }
