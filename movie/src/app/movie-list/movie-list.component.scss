@@ -1,8 +1,8 @@
 $defRadius: 20px;
 .search-row {
     display:flex;
-    background: black;
     justify-content: center;
+    background:rgba(255,255,255,.3);
     input[name=q]{
         border-radius: $defRadius;
     }
@@ -34,7 +34,8 @@ $defRadius: 20px;
 }
 
 .results {
-    background: black;
+    background:rgba(0,0,0,.3);
+    // opacity: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -43,6 +44,11 @@ $defRadius: 20px;
 
 .show-more{
     padding: 5%;
-    background: black;
+    // background: black;
     text-align: center;
+}
+.background-wrapper{
+    background-image: url("Marvel.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
