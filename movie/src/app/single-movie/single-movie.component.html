@@ -1,3 +1,5 @@
 <div class="single-movie" *ngIf="movie">
-  <img [src]="movie.Poster" [alt]="movie.Title" (click)="getMovieDetails(movie.Title)" >
+  <a [href]="'/movies/detail/' + encodeURI(movie.Title)">
+    <img [src]="movie.Poster" [alt]="movie.Title"  >
+  </a>
 </div>
