@@ -26,8 +26,8 @@
   <app-single-movie *ngFor="let movie of firstTenResults" [movie]="movie"></app-single-movie>
 </div>
 
-<div *ngIf="movieResults && movieResults.length > 10">
-  <button (click) = "showMore()">Show more....</button>
+<div class="show-more" *ngIf="movieResults && movieResults.length > 10">
+  <button class="btn btn-info" (click) = "showMore()">Show more....</button>
 </div>
 
 
