@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieService } from './movie.service';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SingleMovieComponent } from './single-movie/single-movie.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
@@ -33,8 +33,9 @@ import { WatchlistDetailComponent } from './watchlist-detail/watchlist-detail.co
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    ReactiveFormsModule
-  ],
+    ReactiveFormsModule,
+    FormsModule,
+        ],
   providers: [MovieService],
   bootstrap: [AppComponent]
 })
