@@ -11,23 +11,27 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MovieDetailComponent implements OnInit {
   public movieInfo: Movie;
-  public movieTitle:string;
 
   constructor(private movieService : MovieService, private route:ActivatedRoute) { 
 
   }
 
   ngOnInit() {
-    this.route.queryParamMap.subscribe(param => {
-     this.movieTitle= param.get('title');
-     if(this.movieTitle != null && this.movieTitle != undefined){
-      this.movieService.getMovie(this.movieTitle).subscribe(
-        data => {
-          this.movieInfo = data
-        }
-      );
-     }
+    // this.route.queryParamMap.subscribe(param => {
+    //  this.movieTitle= param.get('title');
+    this.route.paramMap.subscribe(map => {
+      // console.log(map);
+      let movieTitle: string = map['params'].name;
+      if(movieTitle){
+        this.movieService.getMovie(movieTitle).subscribe(
+          data => {
+            this.movieInfo = data
+          }
+        );
+       }
     });
+     
+    // });
 
      
   }
