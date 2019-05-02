@@ -147,6 +147,7 @@ describe('MovieListComponent', () => {
       expect(actual).toBeGreaterThanOrEqual(expected);
       //teardown
     });
+    
     it('search keyword should return movie(s)', ()=>{
       //setup
       fixture.componentRef.instance.searchForm.setValue({ q: "car" });

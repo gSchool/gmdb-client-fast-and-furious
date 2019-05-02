@@ -1,3 +1,36 @@
-<p>
-  sign-up works!
-</p>
+
+ <h3>SignUp</h3> <br><br>    
+<form  id="signup" [formGroup]="formSignup" (ngSubmit)="signup()">
+  <title>Enter your information to SignUp or press login </title>
+
+  <label>Name       :</label>
+  <input class='name' type="text" formControlName="name" name="name" required />
+  <label *ngIf="formSignup.controls.name.invalid && formSignup.controls.name.dirty" class="alert alert-danger">
+    Name is required
+  </label>
+  <br />
+
+  <label>Phone Number:</label>
+  <input class='phoneNumber' type="phone" formControlName="phoneNumber" name="phoneNumber" />
+  <!-- <label>(optional)</label> -->
+  <br />
+
+  <label>Email    :</label>
+  <input class='email' type="email" formControlName="email" required />
+  <label *ngIf="formSignup.controls.email.invalid && formSignup.controls.email.dirty" class="alert alert-danger">
+    email is invalid
+  </label>
+
+  <br />
+  <label>Password:</label>
+  <input class='password' type="password" formControlName="password" required />
+  <label *ngIf="formSignup.controls.password.invalid && formSignup.controls.password.dirty" class="alert alert-danger">
+    password must have aleast six charaters
+  </label>
+  <br />
+  <br />
+  <input class="btn btn-primary" type="submit" value="signup">
+
+</form>
+
+
