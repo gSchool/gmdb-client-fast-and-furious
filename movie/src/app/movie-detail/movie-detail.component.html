@@ -2,53 +2,53 @@
 
   <div class="row">
     <!-- //Block-1 -->
-    <div class="col-md-4 poster" >
+    <div class="col-lg-4 poster" >
       <img src="{{movieInfo.Poster}}" alt="{{movieInfo.Title}}">
     </div>
 
     <!-- //Block-2 -->
-    <div class="col-md-4">      
+    <div class="col-lg-4">      
       <div class="row">
-          <div class="col-md-12 title"><h2>{{movieInfo.Title}}</h2></div>
-          <div class="col-md-12 year"><h4>{{movieInfo.Year}}</h4></div>
-          <div class="col-md-12 genre">{{movieInfo.Genre}}</div>
+          <div class="col-lg-12 title"><h2>{{movieInfo.Title}}</h2></div>
+          <div class="col-lg-12 year"><h4>{{movieInfo.Year}}</h4></div>
+          <div class="col-lg-12 genre">{{movieInfo.Genre}}</div>
 
-          <div class="col-md-12 rated">{{movieInfo.Rated}}</div>
+          <div class="col-lg-12 rated">{{movieInfo.Rated}}</div>
       </div>
       <br>
 
-      <div class='col-md-12'>
+      <div class='col-lg-12'>
 
           <div class='row'>
-            <div class="col-md-4"><img src="../../assets/images/critics.png"></div>
-            <div class="col-md-4"><label>Metascore</label></div>
-            <div class="col-md-4">{{movieInfo.movieInfo}}</div>
+            <div class="col-lg-4"><img src="../../assets/images/critics.png"></div>
+            <div class="col-lg-4"><label>Metascore</label></div>
+            <div class="col-lg-4">{{movieInfo.movieInfo}}</div>
           </div>
 
           <div class='row'>
-            <div class="col-md-4"><img src="../../assets/images/logo-imdb.svg"></div>
-            <div class="col-md-4"><label>imdbRating</label></div>
-            <div class="col-md-4 imdbRating">{{movieInfo.imdbRating}}</div>
+            <div class="col-lg-4"><img src="../../assets/images/logo-imdb.svg"></div>
+            <div class="col-lg-4"><label>imdbRating</label></div>
+            <div class="col-lg-4 imdbRating">{{movieInfo.imdbRating}}</div>
           </div>
 
           <div class='row'>
-            <div class="col-md-4"><img src="../../assets/images/logo-imdb.svg"></div>
-            <div class="col-md-4"><label>imdbVotes</label></div>
-            <div class="col-md-4 imdbvotes">{{movieInfo.imdbVotes}}</div>
+            <div class="col-lg-4"><img src="../../assets/images/logo-imdb.svg"></div>
+            <div class="col-lg-4"><label>imdbVotes</label></div>
+            <div class="col-lg-4 imdbvotes">{{movieInfo.imdbVotes}}</div>
           </div>
 
           <div class='row'>
-            <div class="col-md-4"><img src="../../assets/images/logo-imdb.svg"></div>
-            <div class="col-md-4"><label>imdbID</label></div>
-            <div class="col-md-4 imdbID">{{movieInfo.imdbID}}</div>
+            <div class="col-lg-4"><img src="../../assets/images/logo-imdb.svg"></div>
+            <div class="col-lg-4"><label>imdbID</label></div>
+            <div class="col-lg-4 imdbID">{{movieInfo.imdbID}}</div>
           </div>
           <br>
 
-          <div class='col-md-12'>
+          <div class='col-lg-12'>
               <div *ngFor="let r of movieInfo.Ratings" [ngClass]="'ratings'">
                 <div class="row rating">
-                  <div class="col-md-8 source">{{r.Source}}</div>
-                  <div class="col-md-4 value">{{r.Value}}</div>
+                  <div class="col-lg-8 source">{{r.Source}}</div>
+                  <div class="col-lg-4 value">{{r.Value}}</div>
                 </div>
               </div>
             </div>
@@ -56,27 +56,27 @@
         </div>
     </div>
      <!-- //Block-3 -->
-    <div class="col-md-4">
+    <div class="col-lg-4">
       <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-8"></div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-8"></div>
       </div>
     
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-lg-4">
           <h4>Director </h4>
         </div>
-        <div class="col-md-8 director">{{movieInfo.Director}}</div>
+        <div class="col-lg-8 director">{{movieInfo.Director}}</div>
       </div>
     
       <div class="row">
-        <div class="col-md-4">Writer </div>
-        <div class="col-md-8 writer">{{movieInfo.Writer}}</div>
+        <div class="col-lg-4">Writer </div>
+        <div class="col-lg-8 writer">{{movieInfo.Writer}}</div>
       </div>
     
       <div class="row">
-        <div class="col-md-4 ">Actors </div>
-        <div class="col-md-8 actors">{{movieInfo.Actors}}</div>
+        <div class="col-lg-4 ">Actors </div>
+        <div class="col-lg-8 actors">{{movieInfo.Actors}}</div>
       </div>
     
     </div>
@@ -85,45 +85,45 @@
   <div class="row">
     
     <!-- //Block-4 -->
-    <div class="col-md-6">
+    <div class="col-lg-6">
        <h2>Movie-Info</h2>
       <div class="row">
-          <div class="col-md-4 ">Release Date</div>
-        <div class="col-md-8 released">{{movieInfo.Released}}</div>
+          <div class="col-lg-4 ">Release Date</div>
+        <div class="col-lg-8 released">{{movieInfo.Released}}</div>
       </div>
 
       <div class="row">
-          <div class="col-md-4">Runtime</div>
-          <div class="col-md-8 runtime">{{movieInfo.Runtime}}</div> 
+          <div class="col-lg-4">Runtime</div>
+          <div class="col-lg-8 runtime">{{movieInfo.Runtime}}</div> 
       </div>
 
        <div class="row">
-          <div class="col-md-4">Language</div>
-          <div class="col-md-8 language">{{movieInfo.Language}}</div>
+          <div class="col-lg-4">Language</div>
+          <div class="col-lg-8 language">{{movieInfo.Language}}</div>
        </div>
 
        <div class="row">
-          <div class="col-md-4">Country</div>
-          <div class="col-md-8 country">{{movieInfo.Country}}</div>
+          <div class="col-lg-4">Country</div>
+          <div class="col-lg-8 country">{{movieInfo.Country}}</div>
        </div>
 
        <div class="row">
-          <div class="col-md-4">Awards</div>
-          <div class="col-md-8 awards">{{movieInfo.Awards}}</div>
+          <div class="col-lg-4">Awards</div>
+          <div class="col-lg-8 awards">{{movieInfo.Awards}}</div>
        </div>
 
        <div class="row">
-          <div class="col-md-4">Type</div>
-          <div class="col-md-8 type">{{movieInfo.Type}}</div> 
+          <div class="col-lg-4">Type</div>
+          <div class="col-lg-8 type">{{movieInfo.Type}}</div> 
        </div>
      
       </div>
 
     <!-- //Block-5 -->
-    <div class="col-md-6">
+    <div class="col-lg-6">
       <div class="row">
         <h2>Synapsis</h2>
-        <div class="col-md-12 plot">{{movieInfo.Plot}}</div>
+        <div class="col-lg-12 plot">{{movieInfo.Plot}}</div>
       </div>
     </div>
   
