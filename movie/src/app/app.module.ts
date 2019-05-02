@@ -9,13 +9,15 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieService } from './movie.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SingleMovieComponent } from './single-movie/single-movie.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieDetailComponent,
     MovieListComponent,
-    SingleMovieComponent
+    SingleMovieComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

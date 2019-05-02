@@ -44,4 +44,10 @@ export class MovieListComponent implements OnInit {
     this.showAll = !this.showAll;
   }
 
+  additionalSearchRowStyle(){
+    let out: string = " ";
+    out += (this.movieResults && this.movieResults.length > 0) ? "" : "no-results";
+    return out;
+  }
+
 }

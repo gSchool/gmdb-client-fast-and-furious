@@ -1,11 +1,13 @@
+
+
 <div>
   <form [ngClass]="'col s12'" [formGroup]="searchForm" (ngSubmit)="findMovie(searchForm)">
-    <div class="row">
-      <div class="input-field col s9">
+    <div [ngClass]="'row search-row' + this.additionalSearchRowStyle()">
+      <div class="input-field search-field">
         <input placeholder="Search" id="q" formControlName="q" name="q" type="text" class="validate">
-        <!-- <label for="q">Search</label> -->
+       
       </div>
-      <div class="input-field col s3">
+      <div class="input-field search-field">
         <input type="submit" value="Search" [ngClass]="'waves-effect waves-light btn'">
       </div>
     </div>
@@ -24,3 +26,46 @@
 <div class="no-results" *ngIf="movieResults && movieResults.length === 0">
   No Results... Sorry, Buddy!!!
 </div>
+
+
+
+
+
+
+<!-- 
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <form [ngClass]="'col s12'" [formGroup]="searchForm" (ngSubmit)="findMovie(searchForm)">
+          <div class="search-box">
+              <input placeholder="Type to Search" id="q" formControlName="q" name="q" type="text" class="search-txt">
+              
+              <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
+          </div>
+          
+          <input type="submit" value="Search" [ngClass]="'waves-effect waves-light btn'">
+         
+        </form>
+      
+      </nav>
+      <div class="results" *ngIf="movieResults && movieResults.length > 0 && showAll">
+        <app-single-movie *ngFor="let movie of movieResults" [movie]="movie"></app-single-movie>
+      </div>
+      <div class="results" *ngIf="movieResults && movieResults.length > 0 && !showAll">
+        <app-single-movie *ngFor="let movie of firstTenResults" [movie]="movie"></app-single-movie>
+      </div>
+      
+      <div *ngIf="movieResults && movieResults.length > 10">
+        <button (click) = "showMore()">Show more....</button>
+      </div>
+      <div class="no-results" *ngIf="movieResults && movieResults.length === 0">
+        No Results... Sorry, Buddy!!!
+      </div>
+   
+ 
+   -->
+
+
+
+  
+
+
+
