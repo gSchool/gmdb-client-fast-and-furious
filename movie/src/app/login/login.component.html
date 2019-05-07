@@ -1,6 +1,21 @@
 <div class="container">
       <form id="login" [formGroup]="loginForm" (ngSubmit)="authenticate()">
+<<<<<<< HEAD
+            <label class="lbl-danger">{{feedback}}</label>
+            <div class="row">
+                  <h3>Login</h3>
+            </div>
+            <div class="row">
+                  <div class="col-lg-3 label-wrapper"> <label>Email:</label></div>
+                  <div class="col-lg-9"><input class='email' type="email" formControlName="email" required /></div>
+                  <div class="col-lg-12"><label *ngIf="loginForm.controls.email.invalid && loginForm.controls.email.dirty"
+                              class="alert alert-danger">
+                              email is invalid                
+                        </label></div>
+            </div>
+=======
             <!-- <label class="lbl-danger">{{feedback}}</label> -->
+>>>>>>> main/master
 
             <div class="form-group">
             <label for="email"><b>Email:</b></label>

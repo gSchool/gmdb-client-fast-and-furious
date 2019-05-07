@@ -16,6 +16,7 @@ import { ReviewCreateComponent } from './review-create/review-create.component';
 import { PasswordResetComponent } from './password-reset/password-reset.component';
 import { WatchlistListComponent } from './watchlist-list/watchlist-list.component';
 import { WatchlistDetailComponent } from './watchlist-detail/watchlist-detail.component';
+import { CreateMovieComponent } from './create-movie/create-movie.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { WatchlistDetailComponent } from './watchlist-detail/watchlist-detail.co
     ReviewCreateComponent,
     PasswordResetComponent,
     WatchlistListComponent,
-    WatchlistDetailComponent
+    WatchlistDetailComponent,
+    CreateMovieComponent
   ],
   imports: [
     BrowserModule,

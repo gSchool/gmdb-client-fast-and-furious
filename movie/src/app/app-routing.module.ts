@@ -8,6 +8,7 @@ import { WatchlistListComponent } from './watchlist-list/watchlist-list.componen
 import { WatchlistDetailComponent } from './watchlist-detail/watchlist-detail.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ReviewCreateComponent } from './review-create/review-create.component';
+import { CreateMovieComponent } from './create-movie/create-movie.component';
 
 const routes: Routes = [
   { path: '', redirectTo: "/movies/search", pathMatch:"full"},
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'watchlist', component: WatchlistListComponent },
   { path: 'watchlist/:id', component: WatchlistDetailComponent},
   { path: 'user/sign-up', component: SignUpComponent },
-  { path: 'movies/review-create/:name', component: ReviewCreateComponent}
+  { path: 'movies/review-create/:name', component: ReviewCreateComponent},
+  { path: 'movies/create', component: CreateMovieComponent}
 ];
 
 @NgModule({
