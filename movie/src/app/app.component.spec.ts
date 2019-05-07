@@ -8,6 +8,7 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { SingleMovieComponent } from './single-movie/single-movie.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CreateMovieComponent } from './create-movie/create-movie.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -22,7 +23,8 @@ describe('AppComponent', () => {
         MovieDetailComponent,
         SingleMovieComponent,
         SignUpComponent,
-        NavbarComponent
+        NavbarComponent,
+        CreateMovieComponent
       ],
     }).compileComponents();
   }));
