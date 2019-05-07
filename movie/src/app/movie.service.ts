@@ -68,42 +68,42 @@ export class MovieService {
   
   getMovie(title:string): Observable<Movie>{
     let data = 
-      {
-        "Title": "The Avengers",
-		"Year": "2012",
-		"Rated": "PG-13",
-		"Released": "04 May 2012",
-		"Runtime": "143 min",
-		"Genre": "Action, Adventure, Sci-Fi",
-		"Director": "Joss Whedon",
-		"Writer": "Joss Whedon (screenplay), Zak Penn (story), Joss Whedon (story)",
-		"Actors": "Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth",
-		"Plot": "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
-		"Language": "English, Russian, Hindi",
-		"Country": "USA",
-		"Awards": "Nominated for 1 Oscar. Another 38 wins & 79 nominations.",
-		"Poster": "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
-		"Ratings": [{
-			"Source": "Internet Movie Database",
-			"Value": "8.1/10"
-		}, {
-			"Source": "Rotten Tomatoes",
-			"Value": "92%"
-		}, {
-			"Source": "Metacritic",
-			"Value": "69/100"
-		}],
-		"Metascore": "69",
-		"imdbRating": "8.1",
-		"imdbVotes": "1,165,317",
-		"imdbID": "tt0848228",
-		"Type": "movie",
-		"DVD": "25 Sep 2012",
-		"BoxOffice": "$623,279,547",
-		"Production": "Walt Disney Pictures",
-		"Website": "http://marvel.com/avengers_movie",
-		"Response": "True"
-	};
+    {
+      "Title": "Thor",
+      "Year": "2011",
+      "Rated": "PG-13",
+      "Released": "06 May 2011",
+      "Runtime": "115 min",
+      "Genre": "Action, Adventure, Fantasy, Sci-Fi",
+      "Director": "Kenneth Branagh",
+      "Writer": "Ashley Miller (screenplay), Zack Stentz (screenplay), Don Payne (screenplay), J. Michael Straczynski (story), Mark Protosevich (story), Stan Lee (comic book), Larry Lieber (comic book), Jack Kirby (comic book)",
+      "Actors": "Chris Hemsworth, Natalie Portman, Tom Hiddleston, Anthony Hopkins",
+      "Plot": "The powerful, but arrogant god Thor, is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.",
+      "Language": "English",
+      "Country": "USA",
+      "Awards": "5 wins & 30 nominations.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOGE4NzU1YTAtNzA3Mi00ZTA2LTg2YmYtMDJmMThiMjlkYjg2XkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg",
+      "Ratings": [{
+        "Source": "Internet Movie Database",
+        "Value": "7.0/10"
+      }, {
+        "Source": "Rotten Tomatoes",
+        "Value": "77%"
+      }, {
+        "Source": "Metacritic",
+        "Value": "57/100"
+      }],
+      "Metascore": "57",
+      "imdbRating": "7.0",
+      "imdbVotes": "668,173",
+      "imdbID": "tt0800369",
+      "Type": "movie",
+      "DVD": "13 Sep 2011",
+      "BoxOffice": "$181,015,141",
+      "Production": "Paramount Pictures",
+      "Website": "http://thor.marvel.com/",
+      "Response": "True"
+    };
       let movie = new Movie();
       Object.keys(data).map( d => movie[d] = data[d]);
       return of(movie);

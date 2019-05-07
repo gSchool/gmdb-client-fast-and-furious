@@ -1,0 +1,15 @@
+.card{
+    margin: 4%;
+    //e8e8e8
+    background: rgba(232, 232, 232, .9);
+
+    width: 100%;
+    .card-img-top{
+        padding: 5%;
+    }
+    .card-img-top img{
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}

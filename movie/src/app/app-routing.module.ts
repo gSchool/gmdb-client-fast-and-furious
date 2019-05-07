@@ -12,6 +12,7 @@ import { ReviewCreateComponent } from './review-create/review-create.component';
 const routes: Routes = [
   { path: '', redirectTo: "/movies/search", pathMatch:"full"},
   { path: 'movies/search', component: MovieListComponent },
+  { path: 'movies/search/:q', component: MovieListComponent },
   { path: 'movies/detail/:name', component: MovieDetailComponent },
   { path: 'user/login', component: LoginComponent },
   { path: 'user/password-reset', component: PasswordResetComponent },
