@@ -18,16 +18,23 @@ export class MovieDetailComponent implements OnInit {
 
   ngOnInit() {
     
-    this.route.paramMap.subscribe(map => {
-      let movieTitle: string = map['params'].name;
-      if(movieTitle){
-        this.movieService.getMovie(movieTitle).subscribe(
-          data => {
-            this.movieInfo = data
+
+    if(this.route && this.route.paramMap){
+      this.route.paramMap.subscribe(map => {
+        if(map['params'] && map['params'].name){
+          let movieTitle: string = map['params'].name;
+          if(movieTitle){
+            this.movieService.getMovie(movieTitle).subscribe(
+              data => {
+                this.movieInfo = data
+              }
+            );
           }
-        );
-       }
-    });
+        }
+        
+      });
+    }
+    
 
      
   }

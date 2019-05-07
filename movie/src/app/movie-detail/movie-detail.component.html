@@ -1,128 +1,126 @@
+<div class="background-wrapper">
+  <div class="container" *ngIf="movieInfo">
+    <div class="row">
+
+      <div class="col-12 col-md-8 col-lg-5">
+        <div class="fakeimg poster"> <img src="{{movieInfo.Poster}}" alt="{{movieInfo.Title}}"></div>
+      </div>
+
+      <div class="col-12 col-md-4 col-lg-7 text">
+        <div class="row">
+          <div class="d-flex">
+            <h2 class="p-2 title">{{movieInfo.Title}}</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="d-flex">
+            <label class="p-2">Imdb</label>
+            <div class="p-2 imdbRating">{{movieInfo.imdbRating}}</div>
+            <!-- <div class="col-lg-4">Runtime</div> -->
+            <div class="p-2 runtime">{{movieInfo.Runtime}}</div>
+            <div class="p-2 rated">{{movieInfo.Rated}}</div>
+            <h5 class="p-2 year">{{movieInfo.Year}}</h5>
+          </div>
+
+          <div class="d-flex">
+            <!-- <h5 class="d-flex">Synopsis</h5> -->
+            <div class="d-flex plot">{{movieInfo.Plot}}</div>
+          </div>
+          
+          <div class="d-flex">
+            <h5 class="p-2" style="color:rgb(136, 143, 143)">Genres: </h5>
+            <div class="p-2 genre" style="color: rgb(255, 255, 255)">{{movieInfo.Genre}}</div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="d-flex">
+            <h5 class="p-2" style="color:rgb(136, 143, 143)">Director: </h5>
+            <div class="p-2 director">{{movieInfo.Director}}</div>
+          </div>
+
+          <div class="d-flex">
+            <h5 class="p-2" style="color:rgb(136, 143, 143)">Actors: </h5>
+            <div class="p-2 actors">{{movieInfo.Actors}}</div>
+          </div>
+
+          <div class="d-flex">
+            <h5 class="p-2" style="color:rgb(136, 143, 143)">Writer: </h5>
+            <div class="p-2 writer">{{movieInfo.Writer}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
 <div class="container" *ngIf="movieInfo">
 
   <div class="row">
-    <!-- //Block-1 -->
-    <div class="col-lg-4 poster" >
-      <img src="{{movieInfo.Poster}}" alt="{{movieInfo.Title}}">
-    </div>
+    <h2 class="p-2">Movie details</h2>
+  </div>
 
-    <!-- //Block-2 -->
-    <div class="col-lg-4">      
-      <div class="row">
-          <div class="col-lg-12 title"><h2>{{movieInfo.Title}}</h2></div>
-          <div class="col-lg-12 year"><h4>{{movieInfo.Year}}</h4></div>
-          <div class="col-lg-12 genre">{{movieInfo.Genre}}</div>
-
-          <div class="col-lg-12 rated">{{movieInfo.Rated}}</div>
-      </div>
-      <br>
-
-      <div class='col-lg-12'>
-
-          <div class='row'>
-            <div class="col-lg-6"><label>Metascore</label></div>
-            <div class="col-lg-6">{{movieInfo.movieInfo}}</div>
-          </div>
-
-          <div class='row'>
-            <div class="col-lg-6"><label>Imdb Rating</label></div>
-            <div class="col-lg-6 imdbRating">{{movieInfo.imdbRating}}</div>
-          </div>
-
-          <div class='row'>
-            <div class="col-lg-6"><label>Imdb Votes</label></div>
-            <div class="col-lg-6 imdbvotes">{{movieInfo.imdbVotes}}</div>
-          </div>
-
-          <div class='row'>
-            <div class="col-lg-6"><label>Imdb ID</label></div>
-            <div class="col-lg-6 imdbID">{{movieInfo.imdbID}}</div>
-          </div>
-          <br>
-
-          <div class='col-lg-12'>
-              <div *ngFor="let r of movieInfo.Ratings" [ngClass]="'ratings'">
-                <div class="row rating">
-                  <div class="col-lg-8 source">{{r.Source}}</div>
-                  <div class="col-lg-4 value">{{r.Value}}</div>
-                </div>
-              </div>
-            </div>
-
-        </div>
-    </div>
-     <!-- //Block-3 -->
-    <div class="col-lg-4">
-      <div class="row">
-        <div class="col-lg-4"></div>
-        <div class="col-lg-8"></div>
-      </div>
-    
-      <div class="row">
-        <div class="col-lg-4">
-          <h4>Director </h4>
-        </div>
-        <div class="col-lg-8 director">{{movieInfo.Director}}</div>
-      </div>
-    
-      <div class="row">
-        <div class="col-lg-4">Writer </div>
-        <div class="col-lg-8 writer">{{movieInfo.Writer}}</div>
-      </div>
-    
-      <div class="row">
-        <div class="col-lg-4 ">Actors </div>
-        <div class="col-lg-8 actors">{{movieInfo.Actors}}</div>
-      </div>
-    
-    </div>
-    </div>
- 
   <div class="row">
-    
-    <!-- //Block-4 -->
-    <div class="col-lg-6">
-       <h2>Movie-Info</h2>
-      <div class="row">
-          <div class="col-lg-4 ">Release Date</div>
-        <div class="col-lg-8 released">{{movieInfo.Released}}</div>
-      </div>
+    <div class="col-sm-3 extra-header">Release Date</div>
+    <div class="col-sm-9 extra-value released">{{movieInfo.Released}}</div>
+  </div>
 
-      <div class="row">
-          <div class="col-lg-4">Runtime</div>
-          <div class="col-lg-8 runtime">{{movieInfo.Runtime}}</div> 
-      </div>
 
-       <div class="row">
-          <div class="col-lg-4">Language</div>
-          <div class="col-lg-8 language">{{movieInfo.Language}}</div>
-       </div>
 
-       <div class="row">
-          <div class="col-lg-4">Country</div>
-          <div class="col-lg-8 country">{{movieInfo.Country}}</div>
-       </div>
 
-       <div class="row">
-          <div class="col-lg-4">Awards</div>
-          <div class="col-lg-8 awards">{{movieInfo.Awards}}</div>
-       </div>
+  <div class="row">
+    <div class="col-sm-3 extra-header">Type</div>
+    <div class="col-sm-9 extra-value type">{{movieInfo.Type}}</div>
+  </div>
 
-       <div class="row">
-          <div class="col-lg-4">Type</div>
-          <div class="col-lg-8 type">{{movieInfo.Type}}</div> 
-       </div>
-     
-      </div>
+  <div class="row">
+    <div class="col-sm-3 extra-header">Awards</div>
+    <div class="col-sm-9 extra-value awards">{{movieInfo.Awards}}</div>
+  </div>
 
-    <!-- //Block-5 -->
-    <div class="col-lg-6">
-      <div class="row">
-        <h2>Synapsis</h2>
-        <div class="col-lg-12 plot">{{movieInfo.Plot}}</div>
-      </div>
-    </div>
-  
+
+  <div class="row">
+    <div class="col-sm-3 extra-header">Country</div>
+    <div class="col-sm-9 extra-value country">{{movieInfo.Country}}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3 extra-header">Language</div>
+    <div class="col-sm-9 extra-value language">{{movieInfo.Language}}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3 extra-header">Imdb ID</div>
+    <div class="col-sm-9 extra-value imdbID">{{movieInfo.imdbID}}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3 extra-header">Imdb Votes</div>
+    <div class="col-sm-9 extra-value imdbvotes">{{movieInfo.imdbVotes}}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3 extra-header">Metascore</div>
+    <div class="col-sm-9 extra-value">{{movieInfo.movieInfo}}</div>
   </div>
 </div>
-<br> 
+
+<div *ngFor="let r of movieInfo.Ratings" [ngClass]="'container ratings'">
+  <div class="row">
+    <div class="col-sm-3 extra-header">{{r.Source}}</div>
+    <div class="col-sm-9 extra-value">{{r.Value}}</div>
+  </div>
+</div>
+
+  <br>
+  <br>
+
+<div class="container" >
+
+  <div class="row">
+    <h2 class="p-2">Customer Review</h2>
+  </div>
+</div>
