@@ -32,7 +32,7 @@ describe('LoginComponent', () => {
       //expect
       let expected = 1;
       //actual
-      let actual = fixture.elementRef.nativeElement.querySelectorAll('.email').length;
+      let actual = fixture.elementRef.nativeElement.querySelectorAll('input[name=email]').length;
     //assert
   
     expect(actual).toEqual(expected);
@@ -45,7 +45,7 @@ describe('LoginComponent', () => {
       //expect
       let expected = 1;
       //actual
-      let actual = fixture.elementRef.nativeElement.querySelectorAll('.password').length;
+      let actual = fixture.elementRef.nativeElement.querySelectorAll('input[name=password]').length; 
     //assert
   
     expect(actual).toEqual(expected);
@@ -58,10 +58,10 @@ describe('LoginComponent', () => {
       //expect
       let expected = 1; //1 or more
       //actual
-      let actual = fixture.elementRef.nativeElement.querySelectorAll('input[type=submit]').length;
+      let actual = fixture.elementRef.nativeElement.querySelectorAll('button[type=submit]').length;
     //assert
     expect(actual).toEqual(expected);
-    expect(fixture.elementRef.nativeElement.querySelector('input[type=submit]')).toBeTruthy();
+    expect(fixture.elementRef.nativeElement.querySelector('button[type=submit]')).toBeTruthy();
     //teardown
   });
 
