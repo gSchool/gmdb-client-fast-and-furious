@@ -2,15 +2,19 @@ $defRadius: 20px;
 .search-row {
     display:flex;
     justify-content: center;
+    
     background:rgba(255,255,255,.3);
     input[name=q]{
         border-radius: $defRadius;
+        height: 37px;
+    margin: 10px;
     }
     
     input[type=submit]{
         border-radius: $defRadius;
         color: white;
         background: red;
+         
     }
 
     .search-field-wrapper{
