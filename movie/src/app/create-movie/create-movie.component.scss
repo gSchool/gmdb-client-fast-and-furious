@@ -9,6 +9,57 @@
 //     background-attachment: fixed;
 // }
 
-.keys{
-    filter: brightness(-100%);
+// .keys{
+//     filter: brightness(-100%);
+// }
+
+h3{
+	color: blue;
+}
+#wrap{
+	width:1000px;
+}
+
+
+.left{
+	width:500px;
+	background-color: transparent;
+	height:1000px;
+	float:left;
+}
+
+.right{
+	width:500px;
+	background-color: transparent;
+	height:1000px;
+	float:right;
+}
+
+.row{
+  padding: 10px;
+  /*border: 1px solid white;*/
+}
+
+body{
+	font-color: FFFFFF;
+}
+/*<html>
+<body text="green">
+<h1>Hello world!</h1>
+<p><a href="https://www.w3schools.com">Visit W3Schools.com!</a></p>
+</body>
+</html>*/
+
+.full-wrapper{
+    // background-color: red;
+    background-image: url(av.jpg);
+}
+
+div {
+    //background: transparent;
+}
+
+.label-wrapper.keys{
+    color:white;
+    font-weight:bold;
 }

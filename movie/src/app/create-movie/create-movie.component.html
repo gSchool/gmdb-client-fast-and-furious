@@ -1,183 +1,195 @@
-<form id="CreateMovie" [formGroup]="createMovie">
-<div class="container total">
-  
-    <h3>Create Movie Page</h3>
+<div class="container-fluid full-wrapper">
+<div class="container">
 
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Title :</div>
-      <div class="col-lg-10 values">
-        <input class='title' type="text" formControlName="title" required />
+  <form id="CreateMovie" [formGroup]="createMovie" text="white">
+    <div class="total">
+
+      <h3>Create Movie Page</h3>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="row">
+            <div class="col-2 keys label-wrapper">Title:</div>
+            <div class="col-10 values">
+              <input class='title' type="text" formControlName="title" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-2 keys label-wrapper">Year:</div>
+            <div class="col-10 values">
+              <input class='year' type="number" formControlName="year" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-2 keys label-wrapper">Rated:</div>
+            <div class="col-10 values">
+              <input class='rated' type="text" formControlName="rated" required />
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-2 keys label-wrapper">Released:</div>
+            <div class="col-10 values">
+              <input class='released' type="text" formControlName="released" required />
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-2 keys label-wrapper">Runtime:</div>
+            <div class="col-10 values">
+              <input class='runtime' type="text" formControlName="runtime" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-2 keys label-wrapper">Genre:</div>
+            <div class="col-10 values">
+              <input class='genre' type="text" formControlName="genre" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-2 keys label-wrapper">Director:</div>
+            <div class="col-10 values">
+              <input class='director' type="text" formControlName="director" required />
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-2 keys label-wrapper">Language:</div>
+            <div class="col-10 values">
+              <input class='language' type="text" formControlName="language" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-2 keys label-wrapper">Country:</div>
+            <div class="col-10 values">
+              <input class='country' type="text" formControlName="country" required />
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="col-2 keys label-wrapper">Writer:</div>
+              <div class="col-10 values">
+                <input class='writer' type="text" formControlName="writer" required />
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2 keys label-wrapper">Actors:</div>
+                <div class="col-10 values">
+                  <input class='actors' type="text" formControlName="actors" required />
+                </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-2 keys label-wrapper">Plot:</div>
+                  <div class="col-10 values">
+                    <textarea class='plot' type="text" formControlName="plot" required></textarea>
+                  </div>
+                </div>
+      
+                <div class="row">
+                  <div class="col-2 keys label-wrapper">Awards:</div>
+                  <div class="col-10 values">
+                    <input class='awards' type="text" formControlName="awards" required />
+                  </div>
+                </div>
+        </div>
+
+
+        <div class="col-12 col-md-6">
+          <div class="row">
+            <div class="col-2 keys label-wrapper">Poster:</div>
+            <div class="col-10 values">
+              <input class='poster' type="text" formControlName="poster" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2 keys label-wrapper">Metascore:</div>
+            <div class="col-10 values">
+              <input class='metascore' type="text" formControlName="metascore" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-2 keys label-wrapper">imdbRating:</div>
+            <div class="col-10 values">
+              <input class='imdbRating' type="text" formControlName="imdbRating" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-2 keys label-wrapper">imdbVotes:</div>
+            <div class="col-10 values">
+              <input class='imdbVotes' type="text" formControlName="imdbVotes" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-2 keys label-wrapper">imdbID:</div>
+            <div class="col-10 values">
+              <input class='imdbid' type="text" formControlName="imdbid" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-2 keys label-wrapper">Type:</div>
+            <div class="col-10 values">
+              <input class='type' type="text" formControlName="type" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-2 keys label-wrapper">DVD:</div>
+            <div class="col-10 values">
+              <input class='dvd' type="text" formControlName="dvd" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-2 keys label-wrapper">BoxOffice:</div>
+            <div class="col-10 values">
+              <input class='boxOffice' type="text" formControlName="boxOffice" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-2 keys label-wrapper">Production:</div>
+            <div class="col-10 values">
+              <input class='production' type="text" formControlName="production" required />
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-2 keys label-wrapper">Website:</div>
+            <div class="col-10 values">
+              <input class='website' type="text" formControlName="website" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2 keys label-wrapper">Response:</div>
+            <div class="col-10 values">
+              <input class='response' type="text" formControlName="response" required />
+            </div>
+          </div>
+        </div>
       </div>
+
+
+
+
+
+
+
+
     </div>
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Year :</div>
-      <div class="col-lg-10 values">
-        <input class='year' type="number" formControlName="year" required />
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Rated :</div>
-      <div class="col-lg-10 values">
-        <input class='rated' type="text" formControlName="rated" required />
-      </div>
-    </div>
-
-
-
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Released :</div>
-      <div class="col-lg-10 values">
-        <input class='released' type="text" formControlName="released" required />
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Runtime :</div>
-      <div class="col-lg-10 values">
-        <input class='runtime' type="text" formControlName="runtime" required />
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Genre :</div>
-      <div class="col-lg-10 values">
-        <input class='genre' type="text" formControlName="genre" required />
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Director :</div>
-      <div class="col-lg-10 values">
-        <input class='director' type="text" formControlName="director" required />
-      </div>
-    </div>
-
-
-
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Writer :</div>
-      <div class="col-lg-10 values">
-        <input class='writer' type="text" formControlName="writer" required />
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Actors :</div>
-      <div class="col-lg-10 values">
-        <input class='actors' type="text" formControlName="actors" required />
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Plot :</div>
-      <div class="col-lg-10 values">
-        <textarea class='plot' type="text" formControlName="plot" required></textarea>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Language :</div>
-      <div class="col-lg-10 values">
-        <input class='language' type="text" formControlName="language" required />
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Country :</div>
-      <div class="col-lg-10 values">
-        <input class='country' type="text" formControlName="country" required />
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Awards :</div>
-      <div class="col-lg-10 values">
-        <input class='awards' type="text" formControlName="awards" required />
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Poster :</div>
-      <div class="col-lg-10 values">
-        <input class='poster' type="text" formControlName="poster" required />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Metascore :</div>
-      <div class="col-lg-10 values">
-        <input class='metascore' type="text" formControlName="metascore" required />
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">imdbRating :</div>
-      <div class="col-lg-10 values">
-        <input class='imdbRating' type="text" formControlName="imdbRating" required />
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">imdbVotes :</div>
-      <div class="col-lg-10 values">
-        <input class='imdbVotes' type="text" formControlName="imdbVotes" required />
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">imdbID :</div>
-      <div class="col-lg-10 values">
-        <input class='imdbid' type="text" formControlName="imdbid" required />
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Type :</div>
-      <div class="col-lg-10 values">
-        <input class='type' type="text" formControlName="type" required />
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">DVD :</div>
-      <div class="col-lg-10 values">
-        <input class='dvd' type="text" formControlName="dvd" required />
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">BoxOffice :</div>
-      <div class="col-lg-10 values">
-        <input class='boxOffice' type="text" formControlName="boxOffice" required />
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Production :</div>
-      <div class="col-lg-10 values">
-        <input class='production' type="text" formControlName="production" required />
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Website :</div>
-      <div class="col-lg-10 values">
-        <input class='website' type="text" formControlName="website" required />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-2 keys label-wrapper">Response :</div>
-      <div class="col-lg-10 values">
-        <input class='response' type="text" formControlName="response" required />
-      </div>
-    </div>
-
-
- 
+  </form>
 </div>
-</form>
+</div>
