@@ -5,8 +5,8 @@
 </div> -->
 
 <div class="card single-movie" *ngIf="movie">
-  <a class="card-img-top" [href]="'/movies/detail/' + movie.Title">
-    <img [src]="movie.Poster" [alt]="movie.Title"  >
+  <a class="card-img-top" [href]="'/movies/detail/' + movie.title + '/' + movie.imdbid">
+    <img [src]="movie.poster" [alt]="movie.Title"  >
   </a>
   <div class="card-body">
       <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->

@@ -21,11 +21,13 @@ export class MovieDetailComponent implements OnInit {
 
     if(this.route && this.route.paramMap){
       this.route.paramMap.subscribe(map => {
-        if(map['params'] && map['params'].name){
-          let movieTitle: string = map['params'].name;
-          if(movieTitle){
-            this.movieService.getMovie(movieTitle).subscribe(
+        if(map['params'] && map['params'].id){
+          // let movieTitle: string = map['params'].name;
+          let movieId: string = map['params'].id;
+          if(movieId){
+            this.movieService.getMovie(movieId).subscribe(
               data => {
+                console.log(data);
                 this.movieInfo = data
               }
             );

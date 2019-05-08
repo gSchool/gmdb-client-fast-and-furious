@@ -3,31 +3,31 @@ let displayHash = {
     imdbRating: "Imdb Rating"
 };
 export class Movie {
-    public Title:string;
-    public Year:string;
-    public Rated:string;
-    public Released:string;
-    public Runtime:string;
-    public Genre:string;
-    public Director:string;
-    public Writer:string;
-    public Actors:string;
-    public Plot:string;
-    public Language:string;
-    public Country:string;
-    public Awards:string;
-    public Poster:string;
-    public Ratings:Rating[];
-    public Metascore:string;
+    public title:string;
+    public year:string;
+    public rated:string;
+    public released:string;
+    public runtime:string;
+    public genre:string;
+    public director:string;
+    public writer:string;
+    public actors:string;
+    public plot:string;
+    public language:string;
+    public country:string;
+    public awards:string;
+    public poster:string;
+    public ratings:Rating[];
+    public metascore:string;
     public imdbRating:string;
     public imdbVotes:string;
-    public imdbID:string;
-    public Type:string;
+    public imdbid:string;
+    public type:string;
     public DVD ?:string;
-    public BoxOffice ?:string;
-    public Production ?:string;
-    public Website ?:string;
-    public Response:string;
+    public boxOffice ?:string;
+    public production ?:string;
+    public website ?:string;
+    public response:string;
 
     convertToDisplay(property: string): string{
         if(displayHash[property]){
