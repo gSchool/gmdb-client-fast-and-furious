@@ -17,6 +17,7 @@ import { PasswordResetComponent } from './password-reset/password-reset.componen
 import { WatchlistListComponent } from './watchlist-list/watchlist-list.component';
 import { WatchlistDetailComponent } from './watchlist-detail/watchlist-detail.component';
 import { CreateMovieComponent } from './create-movie/create-movie.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { CreateMovieComponent } from './create-movie/create-movie.component';
     NgbModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule
         ],
   providers: [MovieService],
   bootstrap: [AppComponent]
