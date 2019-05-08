@@ -108,19 +108,23 @@
   </div>
 </div>
 
-<div *ngFor="let r of movieInfo.Ratings" [ngClass]="'container ratings'">
+<!-- <div *ngIf="movieInfo.Ratings">
+<div  *ngFor="let r of movieInfo.Ratings" [ngClass]="'container ratings'">
   <div class="row">
     <div class="col-sm-3 extra-header">{{r.Source}}</div>
     <div class="col-sm-9 extra-value">{{r.Value}}</div>
   </div>
 </div>
+</div> -->
 
-  <br>
-  <br>
-
-<div class="container" >
+<div class="container reviews" >
 
   <div class="row">
     <h2 class="p-2">Customer Review</h2>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <app-review></app-review>
+    </div>
   </div>
 </div>

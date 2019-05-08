@@ -18,6 +18,8 @@ import { WatchlistListComponent } from './watchlist-list/watchlist-list.componen
 import { WatchlistDetailComponent } from './watchlist-detail/watchlist-detail.component';
 import { CreateMovieComponent } from './create-movie/create-movie.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReviewComponent } from './review/review.component';
+import { SingleReviewComponent } from './single-review/single-review.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { HttpClientModule } from '@angular/common/http';
     PasswordResetComponent,
     WatchlistListComponent,
     WatchlistDetailComponent,
-    CreateMovieComponent
+    CreateMovieComponent,
+    ReviewComponent,
+    SingleReviewComponent
   ],
   imports: [
     BrowserModule,
