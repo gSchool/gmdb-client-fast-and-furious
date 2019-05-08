@@ -1,0 +1,14 @@
+.background-wrapper{
+    background-image: url("Marvel.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+   
+}
+div.search-row{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background:rgba(0,0,0,.3);
+    }
+   

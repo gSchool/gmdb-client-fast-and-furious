@@ -26,7 +26,7 @@ describe('AppComponent', () => {
         SingleMovieComponent,
         SignUpComponent,
         NavbarComponent,
-        CreateMovieComponent
+        CreateMovieComponent,
       ],
     }).compileComponents();
   }));
