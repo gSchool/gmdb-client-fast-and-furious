@@ -18,7 +18,7 @@ export class MovieService {
     if(keyword.length <= 0){
       return this.getAllMovies();
     }
-    return this.httpClient.get<Movie[]>(`http://localhost:8000/movies/api/search/${keyword}`)
+    return this.httpClient.get<Movie[]>(`http://localhost:8083/api/movie/search?keyword=${keyword}`)
       .pipe(
         map( data => data['movies']),
       tap (data => {
@@ -29,7 +29,7 @@ export class MovieService {
     );
   }
   getAllMovies(): Observable<Movie[]>{
-    return this.httpClient.get<Movie[]>("http://localhost:8000/movies/api/search/%20")
+    return this.httpClient.get<Movie[]>("http://localhost:8083/api/movie/search?keyword=%20")
       .pipe(
         map( data => data['movies']),
       tap (data => {
@@ -43,11 +43,8 @@ export class MovieService {
 
   
   getMovie(title:string): Observable<Movie>{
-
-
-
     return this.httpClient
-    .get<Movie>(`http://localhost:8000/movies/api/detail/${title}`).pipe(
+    .get<Movie>(`http://localhost:8083/api/movie/${title}`).pipe(
       map( data => data['movie']),
       tap(_ => {
         console.log('fetched Movie');

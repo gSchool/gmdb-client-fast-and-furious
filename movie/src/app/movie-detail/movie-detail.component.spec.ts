@@ -4,6 +4,7 @@ import { MovieDetailComponent } from './movie-detail.component';
 import { Movie } from '../movie';
 import { ActivatedRoute } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
 
 function escapeHtml(unsafe) {
   return unsafe
@@ -21,7 +22,7 @@ describe('MovieDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+      imports: [RouterTestingModule, HttpClientModule],
       declarations: [ MovieDetailComponent ]
     })
     .compileComponents();

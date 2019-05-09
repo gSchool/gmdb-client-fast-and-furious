@@ -20,7 +20,8 @@ const routes: Routes = [
   { path: 'watchlist', component: WatchlistListComponent },
   { path: 'watchlist/:id', component: WatchlistDetailComponent},
   { path: 'user/sign-up', component: SignUpComponent },
-  { path: 'movies/review-create/:name', component: ReviewCreateComponent},
+  { path: 'movies/review-create/:id', component: ReviewCreateComponent},
+  { path: 'movies/review-create/:id/:navigateBack', component: ReviewCreateComponent},
   { path: 'movies/create', component: CreateMovieComponent}
 ];
 

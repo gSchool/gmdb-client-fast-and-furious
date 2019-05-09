@@ -1,0 +1,6 @@
+<div *ngIf="reviews">
+  <div *ngIf="reviews && reviews.length > 0">
+      <app-single-review *ngFor="let review of reviews" [review]="review"></app-single-review>
+  </div>
+</div>
+<button (click)="createReviewButton()">Create Review</button>
