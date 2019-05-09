@@ -16,6 +16,10 @@ import { ReviewCreateComponent } from './review-create/review-create.component';
 import { PasswordResetComponent } from './password-reset/password-reset.component';
 import { WatchlistListComponent } from './watchlist-list/watchlist-list.component';
 import { WatchlistDetailComponent } from './watchlist-detail/watchlist-detail.component';
+import { CreateMovieComponent } from './create-movie/create-movie.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReviewComponent } from './review/review.component';
+import { SingleReviewComponent } from './single-review/single-review.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,10 @@ import { WatchlistDetailComponent } from './watchlist-detail/watchlist-detail.co
     ReviewCreateComponent,
     PasswordResetComponent,
     WatchlistListComponent,
-    WatchlistDetailComponent
+    WatchlistDetailComponent,
+    CreateMovieComponent,
+    ReviewComponent,
+    SingleReviewComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +44,7 @@ import { WatchlistDetailComponent } from './watchlist-detail/watchlist-detail.co
     NgbModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule
         ],
   providers: [MovieService],
   bootstrap: [AppComponent]

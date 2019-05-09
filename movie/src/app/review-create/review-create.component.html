@@ -1,3 +1,26 @@
-<p>
-  review-create works!
-</p>
+<form>
+  Form is here
+  <form [ngClass]="'col s12'" [formGroup]="createReviewForm" (ngSubmit)="createReview(createReviewForm)">
+    <div [ngClass]="'row create-review-row'">
+        <!-- <input id="movieid" formControlName="movieid" name="movieid" type="hidden" class="validate"> -->
+      <div class="create-review-field-wrapper">
+          <div class="input-field create-review-field">
+            <input placeholder="email" id="email" formControlName="email" name="email" type="email" class="validate">
+          </div>
+          <div class="input-field create-review-field">
+            <input placeholder="title" id="title" formControlName="title" name="title" type="text" >
+          </div>
+          <div class="input-field create-review-field">
+            <input placeholder="description" id="description" formControlName="description" name="description" type="text">
+          </div>
+          <div class="input-field create-review-field">
+            <input type="submit" value="Create" [ngClass]="'waves-effect waves-light btn'">
+          </div>
+      </div>
+      <div class="create-review-error-messages" *ngIf="true">
+          No Results... Sorry, Buddy!!!
+      </div>
+      
+    </div>
+  </form>
+</form>

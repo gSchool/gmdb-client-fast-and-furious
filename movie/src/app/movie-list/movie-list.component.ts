@@ -29,7 +29,7 @@ export class MovieListComponent implements OnInit {
 
   initForm(){
     this.searchForm = this.fb.group({
-      q: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(100)]]
+      q: ['', [Validators.maxLength(100)]]
     });
   }
   initKeyword(){
